@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HarvardStyle.css">
+    <style>
+        
+        /*
+        * If the width of the browser window in larger than 800px (i.e. desktop view), the
+        * two sections, #left and #main will be shown side-by-side. But if you resize the 
+        * browser window to a width less than 800px, we move to a mobile view where the
+        * two sections are displayed one below the other (without the need to zoom out or 
+        * scroll horizontally).
+        */
+
+        #content { 
+            display: flex; 
+        }
+        #left { width: 30%; }
+        #main { width: 70%; }
+
+        @media (max-width: 1000px) {
+            .menu > .tabs1 > span {
+                font-size: 1.2rem;
+            }
+            .search {
+                width: 100px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            #content {
+                display: flex;
+                flex-direction: column;
+            }
+            .search {
+                display: none;
+            }
+            #left, #main {
+                width: 100%;
+            }	
+
+            .menu > .tabs1 > span {
+                font-size: 1rem;
+            }
+            .menu > .tabs2 > span {
+                font-size: 1rem;
+            }
+            .navheader > div.tabs {
+                margin-left: 0;
+            }
+        }
+	</style>
+</head>
+<body>
+    <header>
+        <div class="navheader">
+            <div class="tabs">
+                <span>Faculty</span>
+                <span>Staff</span>
+                <span>Students</span>
+                <span>Alumni</span>
+                <span>Parents</span>
+                <span>Visitors</span>
+                <span>Media</span>
+            </div>
+            <input class="search" type="search" placeholder="What can we help you find?">
+        </div>
+
+        <div class="menu">
+            <div class="tabs1">
+                <span>About Harvard</span>
+                <span >Admissions & Aid</span>
+            </div>
+            <div class="tabs2" style="background-color: #f3f3f1;">
+                <span >Gazette News</span>
+                <span >Events</span>
+            </div>
+        </div>
+
+        <img class="logo" src="Logo.png">
+
+        <div class="menu">
+            <div class="tabs1">
+                <span>Schools</span>
+                <span>On Campus</span>
+            </div>
+            <div class="tabs2" style="background-color: #f3f3f1;">
+                <span>Visit</span>
+                <span>Give</span>
+            </div>
+        </div>
+        
+    </header>
+
+
+    <img src="harvard.jpg" style="width: 100%;">
+
+
+    <div id="information">
+        <h1>About Harvard</h1>
+        <div id="content">
+            <section id="left">
+                <ul style="list-style-type: none">
+                    <li>Harvard at a Glance</li>
+                    <li>Harvard's President</li>
+                    <li>Harvard's Leadership</li>
+                    <li>Academic Experience</li>
+                    <li>Administrative Offices</li>
+                    <li>Directories</li>
+                    <li>FAQ</li>
+                    <li>Harvard in the Community</li>
+                    <li>Maps & Directions</li>
+                    <li>Mobile Apps</li>
+                    <li>News</li>
+                    <li>Social Media and Newsletters</li>
+                </ul>
+            </section>
+
+            <section id="main"> 
+                <p>Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally. The University, which is based in Cambridge and Boston, Massachusetts, has an enrollment of over 20,000 degree candidates, including undergraduate, graduate, and professional students. Harvard has more than 360,000 alumni around the world.            
+                </p>
+
+                <h2> Harvard at a Glance </h2>
+                <p>Harvard faculty are engaged with teaching and research to push the boundaries of human knowledge. For students who are excited to investigate the biggest issues of the 21st century, Harvard offers an unparalleled student experience and a generous financial aid program, with over $160 million awarded to more than 60% of our undergraduate students. The University has twelve degree-granting Schools in addition to the Radcliffe Institute for Advanced Study, offering a truly global education.
+                </p>
+
+                <h3> History </h3>
+                <p>Established in 1636, Harvard is the oldest institution of higher education in the United States. Learn more about the University's history.
+                </p>
+
+                <h3> Latest News </h3>
+                <p>For the latest news from Harvard, sign up for the Daily Gazette email newsletter.
+                </p>
+                
+                <h3> Visit Harvard </h3>
+                <p>Harvard greets people from all over the world, providing historical and general information about campus to visitors, neighbors, and the public. Get more information about tours and visiting Harvard.
+                </p>
+            
+            </section>
+        </div>
+    </div>
+
+</html>

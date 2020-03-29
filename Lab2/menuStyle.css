@@ -1,0 +1,61 @@
+
+div#raiseup {
+    width: 900px; 
+    margin: 0px auto; 
+
+    text-align: center;
+    
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 25;
+}
+
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 11em;
+    float: left;
+}
+
+
+#menu ul ul {
+    position: absolute;
+    bottom: 100%;
+    z-index: 100;
+}
+
+
+
+div#menu ul ul
+{display: none;}
+
+div#menu ul li:hover ul
+{display: block;}
+
+
+
+div#menu h2:hover {
+    font-size: 15px;
+    background: #aa00ff;
+}
+div#menu a:hover {
+    font-size: 13px;
+    background: #dd00f0;
+    color: #505050;
+}
+
+
+
+#menu a, #menu h2 {
+    font: bold 11px/16px arial, helvetica, sans-serif;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d0d0d0 #808080 #505050 #b0b0b0;
+    margin: 0;
+    padding: 2px 3px;
+}
+

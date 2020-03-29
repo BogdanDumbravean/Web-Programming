@@ -1,0 +1,47 @@
+
+* {
+    margin:0 auto;
+}
+
+.graph {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+.bars {
+    width:90%;
+}
+.bar {
+    width: 80px;
+    display: inline-block;
+    background-color: #aeaeae;
+}
+
+.separator {
+    width: 2px;
+    height:100%;
+    float:left;
+    background-color: black;
+}
+
+hr {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+
+#b1 {
+    background-color: green;
+}
+#b2 {
+    background-color: red;
+}
+#b3 {
+    background-color: blue;
+}
+#b4 {
+    background-color: violet;
+}   
+#b5 {
+    background-color: aqua;
+}
