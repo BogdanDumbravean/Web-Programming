@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="SlideshowStyle.css">
+        </style>
+    </head>
+
+    <body>
+        <img id="image" src="img1.jpg" width=800px height=500px>
+
+        <br><br><br><br>
+
+        <input id="button" type="button" value="Play" onclick="toggleSlideshow()">
+
+        <br><br>
+
+        <label for="replay">Replay at End:</label>
+        <input id="replay" type="checkbox">
+
+        <br><br>
+
+        <label for="time">Choose a changing time:</label>
+        <select id="time" onchange="stopTimer()">
+            <option value="1">1 sec</option>
+            <option value="2">2 sec</option>
+            <option value="3">3 sec</option>
+            <option value="4">4 sec</option>
+        </select>
+
+
+        <p id="timer">Slideshow stopped</p>
+
+        <script src="SlideshowScript.js"></script>
+    </body>
+</html>
