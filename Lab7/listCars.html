@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script src="jquery-2.0.3.js"></script>
+        <script>
+            var previousCategory = "";
+            var previousInput = "";
+
+            $(document).ready(function () {
+            $("#button").click(function () {
+                $('#previousFilter').html(previousCategory + " " + previousInput);
+                previousCategory = $("#category").children("option:selected").val();
+                previousInput = $('input').val();
+                $.post("listCars.php", {category: previousCategory, input: previousInput},
+                    function (data, status) {
+                        $("#maindiv").html(data);
+                    });
+            });
+            });
+        </script>
+        
+        
+        <nav>
+        <a>View Cars</a> |
+        <a href="addCar.html">Add Car</a> |
+        <a href="updateCar.html">Update Car</a> |
+        <a href="removeCar.html">Remove Car</a>
+        </nav>
+
+        <hr>
+
+        <label for="previousFilter"></label>Previous filter:</label>
+        <div id="previousFilter"></div>
+
+        <div>
+            <label for="category">Choose a category:</label>
+            <select id="category">
+                <option value="All">Show All</option>
+                <option value="Model">Model</option>
+                <option value="EnginePower">EnginePower</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Price">Price</option>
+                <option value="Color">Color</option>
+                <option value="Year">Year</option>
+            </select>
+            <input type="text" id="input">
+            <input type="submit" id="button">
+        </div>
+        <div id="maindiv"></div>
+
+    </body>
+</html>

@@ -1,0 +1,14 @@
+
+body, table {
+    margin: auto; 
+    margin-top: 10px; 
+    text-align:center;
+}
+
+a {
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.3rem;
+    background-color: #BBDDDD;
+    color: #a51c30;
+}
